@@ -50,7 +50,7 @@
 ### Detail
 * Query parameters를 이용하여 선택한 노래 정보 가져오기
 
-### locker
+### Locker
  1. Music
  * Back-End와 API 통신(GET) 하여 좋아요 버튼을 클릭한 노래 리스트 가져오기
  2. PlayList
