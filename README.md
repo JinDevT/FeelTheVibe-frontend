@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 1차 프로젝트: 정육각 클론
 
-## Available Scripts
+## Intro
+* 좋아하는 음악은 물론, 좋아할 음악까지 들려주는 취향 저격 뮤직 서비스 '바이브'를 소개 드립니다.
+* Front-end 3명, Back-end 2명 총 5명으로 구성된 FeelTheVibe 팀
+* 프로젝트 기간은 2주(2020-06-08 ~ 2020-06-19
 
-In the project directory, you can run:
+## Demo
+- https://youtu.be/HWpyll46m9A
 
-### `npm start`
+## Skills
+* Front-End: React, Functional Component, Hooks, Redux, Router, Styled-component, Javascript
+* Back-End: Django, MySQL
+* Tools: Git, AWS
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Systems
+* 매일 아침 Stand Up 미팅으로 진행 단계 공유 및 전체적인 흐름 회의
+* Trello를 사용하여 진행 상황 체크
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Goal
+* 기존의 바이브와 동일한 UI/기능 구현
+* React의 꽃, 컴포넌트 및 재사용 상황에 따라 알맞은 Hooks 사용 
+* Redux를 사용하여 전역 state 관리
+* Back-end와 API 통신
 
-### `npm test`
+## Explanation
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### SideNav
+* 로그인, 비로그인 상태에 따라 UI 동적으로 구현
+* Redux를 사용하여 선택한 목록 active 상태 관리
+* history.push()를 사용하여 해당 페이지 이동 구현
 
-### `npm run build`
+### Login
+* naver 소셜로그인 구현
+* JWT Access Token을 활용하여 Back-End와 통신
+* 로그아웃 버튼 클릭 시, access_token 삭제 구현
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Main
+* Back-End와 API 통신(GET)하여 해당 차트 목록 가져오기
+* slick 라이브러리를 사용하여 슬라이더 구현
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Chart
+* Back-End와 API 통신(GET) 하여 Top100 차트 목록 가져오기
+* scroll 시, SubHeader 구현
+* 노래 제목 클릭 시, 노래 디테일 페이지로 이동
+* 좋아요 버튼 상태에 따라 보관함 - 노래에 저장 및 삭제
+* 체크박스로 선택한 곡의 개수를 SubHeader에 표현 및 내 플레이리스트 추가 버튼 클릭 시, 플레이리스트에 담기
+* 가사 보기 클릭 시, 모달 기능 구현 (Back-End와 API 통신(GET) 하여 해당 가사 가져오기)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Detail
+* Query parameters를 이용하여 선택한 노래 정보 가져오기
 
-### `npm run eject`
+### Mypage
+ 1. Music
+ * Back-End와 API 통신(GET) 하여 좋아요 버튼을 클릭한 노래 리스트 가져오기
+ 2. PlayList
+ * Back-End와 API 통신(GET) 하여 플레이리스트에 추가 한 노래 리스트 가져오기
+ * Back-End와 API 통신(POST) 하여 플레이 리스트 추가 버튼 클릭 시, 새로운 플레이 리스트 생성하기
+ * 전체 재생 버튼 클릭 시, 플레이어에 해당 목록 전달하기
+ 3. Artist
+ * Moca Data 사용하여(GET) 좋아요 버튼을 클릭한 아티스트 목록 가져오기
+ * Moca Data를 사용하여(DELETE) 좋아요 버튼 클릭 시, 삭제하기
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Player
+* Drag And Drop 구현
+* Back-End와 API 통신(GET) 하여 받아온 음악파일 재생, 중간 재생, 다음 곡, 반복 재생, 랜덤 재생 구현
+* 볼륨 조절 구현
+* RRedux를 사용하여 플레이어 내부 현재 재생 정보(커버 사진, 가수 등) 관리
+* 음악의 재생 시간에 맞춰 플레이바와 재생시간 동기화 구현
