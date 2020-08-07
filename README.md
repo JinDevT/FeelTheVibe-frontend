@@ -25,12 +25,12 @@
 
 ## Explanation
 
-### SideNav
+### SideNav (맡은 업무 : 100% 구현 완료)
 * 로그인, 비로그인 상태에 따라 UI 동적으로 구현
 * Redux를 사용하여 선택한 목록 active 상태 관리
 * history.push()를 사용하여 해당 페이지 이동 구현
 
-### Login
+### Login (맡은 업무 : 100% 구현 완료)
 * naver 소셜로그인 구현
 * JWT Access Token을 활용하여 Back-End와 통신
 * 로그아웃 버튼 클릭 시, access_token 삭제 구현
@@ -47,10 +47,10 @@
 * 체크박스로 선택한 곡의 개수를 SubHeader에 표현 및 내 플레이리스트 추가 버튼 클릭 시, 플레이리스트에 담기
 * 가사 보기 클릭 시, 모달 기능 구현 (Back-End와 API 통신(GET) 하여 해당 가사 가져오기)
 
-### Detail
+### Detail (맡은 업무 : 100% 구현 완료)
 * Query parameters를 이용하여 선택한 노래 정보 가져오기
 
-### Locker
+### Locker (맡은 업무 : 100% 구현 완료)
  1. Music
  * Back-End와 API 통신(GET) 하여 좋아요 버튼을 클릭한 노래 리스트 가져오기
  2. PlayList
